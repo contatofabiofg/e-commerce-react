@@ -1,0 +1,78 @@
+.loading {
+  width: 40px;
+  height: 40px;
+  background-image: url("/src/images/loading.gif");
+  background-position: center;
+  background-size: cover;
+}
+
+.catalogo-area {
+  display: flex;
+  
+  align-items: center;
+  flex-wrap: wrap;
+  transition: 0.5s ease all;
+}
+
+.catalogo-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 200px;
+  padding: 20px;
+  margin: 5px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(202, 202, 202);
+  border-radius: 10px;
+}
+
+.catalogo-img {
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  margin-bottom: 10px;
+  
+}
+
+.catalogo-id {
+  color: rgb(132, 0, 255);
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.catalogo-title {
+  font-weight: bold;
+  text-align: center;
+  font-size: 12px;
+  max-width: 20ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.catalogo-price {
+  font-size: 14px;
+}
+
+.catalogo-category {
+  color: rgb(92, 92, 92);
+  font-size: 9px;
+}
+
+.catalogo-add {
+  color: white;
+  background-color: rgb(58, 168, 58);
+  width: 150px;
+  height: 20px;
+  border-radius: 15px;
+  border: none;
+  margin-top: 10px;
+  cursor:pointer;
+  transition: 0.5s ease all;
+  
+}
+.catalogo-add:hover {
+  background-color: rgb(42, 121, 42);
+}

@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Catalogo } from "./components/catalogo/Catalogo";
+import { Carrinho } from "./components/carrinho/Carrinho";
+import { MenuCategorias } from "./components/menucategorias/MenuCategorias";
+import { Routes, Route } from "react-router-dom";
+import "./app.css";
+import { MenuOrdenar } from "./components/menuordenar/MenuOrdenar";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+
+  return <div className="app">
+    <div className="leftarea">
+      <MenuCategorias />
+      <MenuOrdenar />
     </div>
-  );
+    <div className="centerarea">
+      <Routes>
+        <Route path="/" element={<Catalogo />}></Route>
+        <Route path="/:categoria" element={<Catalogo />}></Route>
+      </Routes>
+    </div>
+    <div className="rightarea">
+      <Carrinho />
+    </div>
+  </div>
 }
 
 export default App;

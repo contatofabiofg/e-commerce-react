@@ -1,0 +1,16 @@
+.menuordenar {
+  width: 200px;
+  height: 130px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(202, 202, 202);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  text-transform: uppercase;
+}
