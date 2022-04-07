@@ -7,13 +7,12 @@ import { BrowserRouter } from "react-router-dom";
 import { ContextProvider } from "./contexts/Context";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ContextProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </ContextProvider>
-  </React.StrictMode>,
+  <ContextProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </ContextProvider>
+  ,
   document.getElementById('root')
 );
 

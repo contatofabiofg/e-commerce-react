@@ -1,8 +1,15 @@
 .cart-area {
-  
-  height: 100%;
+
+  border-radius: 30px;
+  margin: 20px;
   display: flex;
-  
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: 0.5s ease all;
+  min-width: 400px;
+  background-color: #e9e9e9;
+
 }
 
 .cart-itens-area {
@@ -11,21 +18,23 @@
 
 .cart-item-area {
   display: flex;
-  width: 220px;
+  justify-content: space-between;
+  width: 370px;
   height: auto;
   background-color: rgb(255, 255, 255);
   border: 2px solid rgb(202, 202, 202);
   border-radius: 10px;
   padding: 5px;
   margin-bottom: 3px;
-  
-  
+
+
+
 }
 
 .cart-item-img {
-width:30px;
-height: 30px;
-margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
 
 .cart-item-title {
@@ -34,4 +43,18 @@ margin-right: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.cart-item-delete {
+  width: 20px;
+  height: 30px;
+}
+
+.cart-item-delete-img {
+  width: 20px;
+  height: 25px;
+  background-image: url("/src/images/delete.png");
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
 }

@@ -60,11 +60,6 @@ export const Catalogo = () => {
     return 0;
   };
 
-  if (state.main.lowerprice === true) {
-    lista.sort(AscOrder);
-  } else {
-    lista.sort(RegularOrder);
-  }
 
 
   if (params.categoria === "masculinas") {
@@ -89,6 +84,12 @@ export const Catalogo = () => {
     lista2 = lista;
   };
 
+  if (state.main.lowerprice === true) {
+    lista2.sort(AscOrder);
+  } else {
+    lista2.sort(RegularOrder);
+  }
+
 
   const addclick = (i: number) => {
 
@@ -96,16 +97,18 @@ export const Catalogo = () => {
     dispatch({
       type: "ADD_CART",
       payload: {
-        id: lista[i].id,
-        title: lista[i].title,
-        price: lista[i].price,
-        description: lista[i].description,
-        category: lista[i].category,
-        image: lista[i].image
+        id: lista2[i].id,
+        title: lista2[i].title,
+        price: lista2[i].price,
+        description: lista2[i].description,
+        category: lista2[i].category,
+        image: lista2[i].image,
+        qt: 1
       }
 
     })
-    console.log(state.cart)
+    console.log(state.cart);
+    
   };
 
 
